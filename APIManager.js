@@ -33,7 +33,7 @@ class APIManager {
     });
   }
 
-  pokemon() {}
+  pokemon() {} //api is not valid
 
   meat() {
     $.ajax({
