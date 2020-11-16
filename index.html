@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>API Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="user-container">
+        <script id="mainUser" type="text/x-handlebars-template">
+          <img src="{{image}}" id="profile-pic" alt="" />
+          <div class="user-info">
+            {{title}} {{firstName}} {{lastName}}
+            <div>{{location}}</div>
+          </div>
+        </script>
+      </div>
+      <div class="quote-container">
+        <script id="quote" type="text/x-handlebars-template">
+          <div>
+            favorite kanye quote: {{quote}}
+          </div>
+        </script>
+      </div>
+      <div class="content-container">
+        <div class="pokemon-container"></div>
+        <div class="meat-container" id="meat">
+          <script id="meat" type="text/x-handlebars-template">
+            <div class="meat-text">
+              {{meat}}
+            </div>
+          </script>
+        </div>
+      </div>
+      <div class="friends">
+        <h4>Friends</h4>
+        <div class="friends-container">
+            <script id="users" type="text/x-handlebars-template">
+                {{#each users}}
+                    <p class="friends">{{firstName}} {{lastName}}</p>
+                {{/each}}
+            </script>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="load">Load User Data</button>
+        <button id="display">Display User</button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
